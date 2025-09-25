@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEO Meta Tags -->
+    <title>Chuyển Đổi Ảnh Online Miễn Phí - Đổi Kích Thước & Định Dạng</title>
+    <meta name="description" content="Công cụ chuyển đổi ảnh trực tuyến miễn phí, giúp bạn thay đổi định dạng (PNG, JPG, WEBP) và kích thước ảnh cho favicon, icon, thumbnail một cách nhanh chóng.">
+    <meta name="keywords" content="chuyển đổi ảnh, đổi định dạng ảnh, đổi kích thước ảnh, image converter, resize image, png, jpg, webp, favicon, icon">
+
+    <!-- Open Graph Meta Tags (for social media sharing) -->
+    <meta property="og:title" content="Chuyển Đổi Ảnh Online Miễn Phí - Nhanh và Dễ Dàng">
+    <meta property="og:description" content="Công cụ nhanh, miễn phí để đổi định dạng và kích thước ảnh (PNG, JPG, WEBP) ngay trên trình duyệt.">
+    <meta property="og:image" content="images/apple-touch-icon.svg"> 
+    <meta property="og:url" content="https://toanthucte.github.io/chuyen-doi-anh-app/">
+    <meta property="og:type" content="website">
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="images/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="images/apple-touch-icon.svg">
+</head>
+<body>
+    <div class="container">
+        <h1>Chuyển đổi ảnh <span id="infoIcon" title="Xem hướng dẫn">ⓘ</span></h1>
+
+        <!-- Modal for instructions -->
+        <div id="infoModal" class="modal-overlay hidden">
+            <div class="modal-content">
+                <span class="modal-close">&times;</span>
+                <div id="modal-body">
+                    <!-- Content from markdown will be here -->
+                    <h2>Hướng Dẫn Tối Ưu Hóa Kích Thước và Định Dạng Hình Ảnh</h2>
+                    <p>Đây là bản tổng hợp chi tiết về các kích thước và định dạng hình ảnh phổ biến, cùng với lời khuyên về mục đích sử dụng để đạt hiệu quả tốt nhất.</p>
+                    
+                    <h3>1. Favicon (Biểu tượng trang web)</h3>
+                    <p><strong>Mục đích:</strong> Là "bộ mặt" của trang web, hiển thị trên tab trình duyệt, thanh dấu trang, kết quả tìm kiếm và khi người dùng lưu trang web ra màn hình chính.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Kích thước</th>
+                                <th>Mục đích sử dụng</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>16x16</code></td>
+                                <td>Dành cho các trình duyệt rất cũ.</td>
+                            </tr>
+                            <tr>
+                                <td><code>32x32</code></td>
+                                <td>Kích thước tiêu chuẩn cho tab trình duyệt hiện đại.</td>
+                            </tr>
+                            <tr>
+                                <td><code>48x48</code></td>
+                                <td>Dành cho các trang "site" của Windows.</td>
+                            </tr>
+                            <tr>
+                                <td><code>180x180</code></td>
+                                <td><strong>Apple Touch Icon</strong>: Khi lưu trang web ra màn hình chính trên iOS.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><strong>Lời khuyên về định dạng:</strong></p>
+                    <ul>
+                        <li><strong>SVG (<code>favicon.svg</code>):</strong> Ưu tiên hàng đầu. Siêu nhẹ, sắc nét ở mọi độ phân giải.</li>
+                        <li><strong>ICO (<code>favicon.ico</code>):</strong> Dùng làm phương án dự phòng để tương thích tối đa.</li>
+                        <li><strong>PNG (<code>.png</code>):</strong> Hỗ trợ nền trong suốt, thường dùng cho <code>apple-touch-icon.png</code>.</li>
+                    </ul>
+
+                    <h3>2. App Icons (Biểu tượng ứng dụng)</h3>
+                    <p><strong>Mục đích:</strong> Đại diện cho ứng dụng trên màn hình chính và cửa hàng ứng dụng.</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Kích thước</th>
+                                <th>Nền tảng / Mục đích</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><code>192x192</code></td>
+                                <td><strong>Android Icon</strong>: Biểu tượng chính.</td>
+                            </tr>
+                            <tr>
+                                <td><code>512x512</code></td>
+                                <td><strong>Google Play Store</strong>.</td>
+                            </tr>
+                            <tr>
+                                <td><code>180x180</code></td>
+                                <td><strong>iOS Icon</strong> (iPhone Retina @3x).</td>
+                            </tr>
+                            <tr>
+                                <td><code>1024x1024</code></td>
+                                <td><strong>Apple App Store</strong>.</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                    <p><strong>Lời khuyên về định dạng:</strong></p>
+                    <ul>
+                        <li><strong>PNG:</strong> Bắt buộc và là tiêu chuẩn vàng. Đảm bảo chất lượng và hỗ trợ nền trong suốt.</li>
+                    </ul>
+
+                    <h3>3. Hình ảnh trên nội dung Web</h3>
+                    <h4>a. Thumbnail (Ảnh thu nhỏ)</h4>
+                    <ul>
+                        <li><strong>Kích thước:</strong> <code>150x150</code>, <code>200x200</code>, hoặc tỷ lệ <code>1:1</code>, <code>4:3</code>, <code>16:9</code>.</li>
+                        <li><strong>Định dạng:</strong> <strong>WEBP</strong> (tối ưu nhất), <strong>JPEG</strong> (ảnh chụp nhiều màu sắc).</li>
+                    </ul>
+                    <h4>b. Hero Image / Banner</h4>
+                    <ul>
+                        <li><strong>Kích thước:</strong> Rộng <code>1920px</code> hoặc <code>1600px</code>.</li>
+                        <li><strong>Định dạng:</strong> <strong>WEBP</strong> (cân bằng chất lượng/tốc độ), <strong>JPEG</strong> (tương thích rộng).</li>
+                    </ul>
+                    <h4>c. Logo</h4>
+                    <ul>
+                        <li><strong>Định dạng:</strong> <strong>SVG</strong> là bắt buộc để đảm bảo sắc nét.</li>
+                    </ul>
+
+                    <h3>Tổng kết nhanh về định dạng</h3>
+                    <ul>
+                        <li><strong>SVG:</strong> Dùng cho logo và icon đơn giản.</li>
+                        <li><strong>WEBP:</strong> Định dạng của tương lai cho web, tối ưu tốc độ.</li>
+                        <li><strong>JPEG:</strong> Dùng cho ảnh chụp phức tạp.</li>
+                        <li><strong>PNG:</strong> Dùng khi cần nền trong suốt.</li>
+                        <li><strong>GIF:</strong> Chỉ dùng cho ảnh động đơn giản (nên thay bằng video).</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <div class="upload-container">
+            <input type="file" id="imageLoader" name="imageLoader" accept="image/*,image/svg+xml"/>
+            <label for="imageLoader" class="upload-label">Chọn hoặc kéo ảnh vào đây</label>
+        </div>
+        <div class="preview-container">
+            <img id="imagePreview" src="#" alt="Xem trước ảnh" class="hidden"/>
+        </div>
+        <div class="options-container">
+            <h2>Tùy chọn chuyển đổi</h2>
+            <div class="option">
+                <label for="formatSelector">Định dạng:</label>
+                <select id="formatSelector">
+                    <option value="png">PNG</option>
+                    <option value="jpeg">JPEG</option>
+                    <option value="webp">WEBP</option>
+                </select>
+            </div>
+            <div class="option">
+                <label for="sizeSelector">Kích thước:</label>
+                <select id="sizeSelector">
+                    <option value="original">Giữ nguyên kích thước</option>
+                    <option value="16x16">16x16 (Favicon)</option>
+                    <option value="32x32">32x32 (Favicon)</option>
+                    <option value="48x48">48x48 (Icon)</option>
+                    <option value="128x128">128x128 (Icon)</option>
+                    <option value="180x180">180x180 (Apple Touch Icon)</option>
+                    <option value="192x192">192x192 (Android Icon)</option>
+                    <option value="512x512">512x512 (App Store Icon)</option>
+                    <option value="custom">Tùy chỉnh</option>
+                </select>
+            </div>
+            <div id="customSizeContainer" class="option hidden">
+                <label>Kích thước tùy chỉnh:</label>
+                <input type="number" id="customWidth" placeholder="Rộng">
+                <span>x</span>
+                <input type="number" id="customHeight" placeholder="Cao">
+            </div>
+            <button id="convertBtn">Chuyển đổi & Tải về</button>
+        </div>
+        <div class="result-container">
+            <h2>Kết quả</h2>
+            <a id="downloadLink" class="hidden"></a>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

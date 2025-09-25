@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 180 180">
+    <rect width="180" height="180" fill="#e9f5ff" rx="30"/>
+    <g transform="translate(20, 20) scale(0.8)">
+        <defs>
+            <linearGradient id="grad-apple" x1="0%" y1="0%" x2="100%" y2="100%">
+                <stop offset="0%" stop-color="#007bff"/>
+                <stop offset="100%" stop-color="#0056b3"/>
+            </linearGradient>
+        </defs>
+        <!-- Picture frame -->
+        <path d="M20 15 L 80 15 L 80 85 L 20 85 Z" fill="none" stroke="url(#grad-apple)" stroke-width="10" rx="5"/>
+        <!-- Simple landscape inside -->
+        <path d="M35 70 L 50 50 L 65 65" stroke="url(#grad-apple)" stroke-width="8" fill="none" stroke-linecap="round" stroke-linejoin="round"/>
+        <circle cx="40" cy="35" r="7" fill="url(#grad-apple)"/>
+        <!-- Conversion arrow -->
+        <path d="M30 50 C 30 30, 70 30, 70 50" fill="none" stroke="#28a745" stroke-width="10" stroke-linecap="round"/>
+        <path d="M60 55 L 70 50 L 60 45" fill="none" stroke="#28a745" stroke-width="10" stroke-linecap="round" stroke-linejoin="round"/>
+    </g>
+</svg>
