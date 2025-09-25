@@ -62,8 +62,7 @@ document.addEventListener('DOMContentLoaded', () => {
         }
 
         const format = formatSelector.value;
-        const mimeType = `image/${format}`;
-
+        
         const canvas = document.createElement('canvas');
         canvas.width = width;
         canvas.height = height;
@@ -71,6 +70,20 @@ document.addEventListener('DOMContentLoaded', () => {
 
         // Draw image on canvas with new dimensions
         ctx.drawImage(originalImage, 0, 0, width, height);
+
+        // Handle ICO conversion separately
+        if (format === 'ico') {
+            // The library canvasToICO is now available globally
+            const icoUrl = canvasToICO(canvas);
+            downloadLink.href = icoUrl;
+            downloadLink.download = `${originalFileName}_${width}x${height}.ico`;
+            downloadLink.textContent = `Tải về ảnh (${width}x${height}.ico)`;
+            downloadLink.classList.remove('hidden');
+            return; // Stop execution here for ICO
+        }
+
+        // For other formats (PNG, JPEG, WEBP)
+        const mimeType = `image/${format}`;
 
         // Get data URL and trigger download
         canvas.toBlob((blob) => {
